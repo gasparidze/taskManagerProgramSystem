@@ -8,6 +8,8 @@ import java.util.Map;
  */
 public enum Status {
     New("Новая"),
+    Process("Принята к исполнению"),
+    Reassigned("Переназначена"),
     Cancelled("Отменена"),
     Completed("Выполнена");
 
@@ -33,6 +35,8 @@ public enum Status {
     public static Map<Integer, Status> getStatuses() {
         Map<Integer, Status> statuses = new HashMap();
         statuses.put(1, New);
+        statuses.put(2, Process);
+        statuses.put(3, Reassigned);
         statuses.put(4, Cancelled);
         statuses.put(5, Completed);
         return statuses;
