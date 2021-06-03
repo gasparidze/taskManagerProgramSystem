@@ -120,7 +120,14 @@ public class TaskManager {
         tasks.get(numOfChangeTask).setStudent(students.get(numOfStudent));
     }
 
-
+    /**
+     * changeTaskDeleteStudent снимает сотрудника с данной задачи
+     *
+     * @param numOfChangeTask - задача, выбранная пользователем
+     */
+    public void changeTaskDeleteStudent(int numOfChangeTask) {
+        tasks.get(numOfChangeTask).setStudent(null);
+    }
 
     /**
      * changeTaskStatus изменяет статус задачи
@@ -252,6 +259,8 @@ public class TaskManager {
             System.out.println("Файл отсуствует");
         } catch (EOFException e) {
             System.out.println("Файл пуст");
+        } catch (StreamCorruptedException e) {
+            System.out.println("Невозможно считать данные, проверьте файл");
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
