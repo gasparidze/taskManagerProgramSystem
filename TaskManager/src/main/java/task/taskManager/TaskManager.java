@@ -120,7 +120,14 @@ public class TaskManager {
         tasks.get(numOfChangeTask).setStudent(students.get(numOfStudent));
     }
 
-
+    /**
+     * changeTaskDeleteStudent снимает сотрудника с данной задачи
+     *
+     * @param numOfChangeTask - задача, выбранная пользователем
+     */
+    public void changeTaskDeleteStudent(int numOfChangeTask) {
+        tasks.get(numOfChangeTask).setStudent(null);
+    }
 
     /**
      * changeTaskStatus изменяет статус задачи

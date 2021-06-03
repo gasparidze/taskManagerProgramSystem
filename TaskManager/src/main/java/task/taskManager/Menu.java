@@ -94,7 +94,10 @@ public class Menu {
                                             taskManager.changeTaskNewStudent(numOfChangeTask, numOfStudent);
                                             break;
                                         }
-
+                                        case 2: {
+                                            taskManager.changeTaskDeleteStudent(numOfChangeTask);
+                                            break;
+                                        }
                                     }
                                 } else {
                                     System.out.println("Список сотрудников пуст");
