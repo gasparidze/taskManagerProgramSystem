@@ -259,6 +259,8 @@ public class TaskManager {
             System.out.println("Файл отсуствует");
         } catch (EOFException e) {
             System.out.println("Файл пуст");
+        } catch (StreamCorruptedException e) {
+            System.out.println("Невозможно считать данные, проверьте файл");
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
